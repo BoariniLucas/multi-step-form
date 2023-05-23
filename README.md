@@ -16,7 +16,8 @@ Nesse projeto irei desenvolver uma aplicação onde o usuário irá realizar um 
 
 O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em HTML, CSS e JavaScript, e para o desenvolvimento desse projeto estou utilizando os passos conforme listados abaixo:
 
-- [ ] Montar estrutura básica do formulário;
+- [X] Montar estrutura básica do formulário;
+- [X] Desenvolvimento do Sidebar Desktop;
 - [ ] Passo 1 do formulário;
 - [ ] Passo 2 do formulário mensal;
 - [ ] Passo 2 do formulário anual;
