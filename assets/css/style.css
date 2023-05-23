@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/Ubuntu-Regular.ttf') format(truetype);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/Ubuntu-Medium.ttf') format(truetype);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/Ubuntu-Bold.ttf') format(truetype);
+    font-weight: 700;
+}
+
+:root {
+    --principalFont: 'ubuntu';
+    --whiteColor: #fff;
+    --bgColor: #eef5ff;
+    --borderStepSB: #f3f8ff;
+    --selectedStep: #bce1fd;
+    --selectedStepNumber: #00204a;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: var(--principalFont);
+    font-size: 16px;
+    background-color: var(--bgColor);
+}
+
+.principal-form {
+    display: flex;
+    justify-content: space-between;
+    height: 37.5em;
+    width: 55em;
+    border-radius: 10px;
+    padding: 1em;
+    box-sizing: border-box;    
+    background-color: green;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 35.5em;
+    width: 17.125em;
+    background: url(../images/bg-sidebar-desktop.svg);
+    background-repeat: no-repeat; 
+    padding: 2em;   
+    box-sizing: border-box;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    height: 3em;
+    width: 10em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    box-sizing: border-box;
+}
+
+.step-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    height: 2em;
+    width: 2em;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: 1px solid var(--borderStepSB);    
+    color: var(--borderStepSB);
+}
+
+.step-selected {
+    font-weight: 700;
+    border: solid var(--selectedStep);
+    color: var(--selectedStepNumber);
+    background-color: var(--selectedStep);
+}
+
+.step-title {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    margin-left: 1em;
+    color: var(--borderStepSB);
+    line-height: 17px;
+    font-weight: 500;
+}
+
+.step-title strong {
+    font-size: 0.8em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.step-1 {
+    height: 100%;
+    width: 65%;
+    background-color: red;
+}
+
