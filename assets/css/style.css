@@ -23,6 +23,9 @@
     --borderStepSB: #f3f8ff;
     --selectedStep: #bce1fd;
     --selectedStepNumber: #00204a;
+    --titleFontColor: #00204a;
+    --warningColor: #e23349;
+    --labelFormColor: #0a1e2d;
 }
 
 body {
@@ -33,7 +36,7 @@ body {
     width: 100%;
     font-family: var(--principalFont);
     font-size: 16px;
-    background-color: var(--bgColor);
+    background-color: /*var(--bgColor)*/ rgb(211, 211, 211);
 }
 
 .principal-form {
@@ -44,7 +47,7 @@ body {
     border-radius: 10px;
     padding: 1em;
     box-sizing: border-box;    
-    background-color: green;
+    background-color: var(--whiteColor);
 }
 
 .sidebar {
@@ -106,9 +109,81 @@ body {
     opacity: 0.5;
 }
 
-.step-1 {
+.form-step {
+    display: flex;
+    justify-content: center;
     height: 100%;
     width: 65%;
-    background-color: red;
+}
+
+.form-step h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 1.5em;
+    color: var(--titleFontColor);
+}
+
+.form-step p {
+    margin-top: 0.5em;
+    opacity: 0.6;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 28em;
+}
+
+.form-step-1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+}
+
+.form-step-1 div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4em;
+}
+
+.form-step-1 label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--labelFormColor);
+}
+
+.form-step-1 span {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--warningColor);
+}
+
+.form-step-1 input {
+    height: 3em;
+    border: 1 #00204a;
+    border-radius: 8px;
+    outline: none!important;
+    box-shadow: none;
+    /*border-color: #00204a;*/
+    margin-bottom: 2em;
+}
+
+
+
+.f-step-1 {
+    display: flex;
+}
+
+.f-step-2 {
+    display: none;
+}
+
+.f-step-3 {
+    display: none;
+}
+
+.f-step-4 {
+    display: none;
 }
 
