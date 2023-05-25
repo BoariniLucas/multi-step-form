@@ -25,7 +25,10 @@
     --selectedStepNumber: #00204a;
     --titleFontColor: #00204a;
     --warningColor: #e23349;
-    --labelFormColor: #0a1e2d;
+    --inputBorderColor: #d9d8dc;
+    --inputHoverBorderColor: #554f95;
+    --btnColor: #03295a;
+    --btnHoverColor: #174a8b;
 }
 
 body {
@@ -138,6 +141,7 @@ body {
 .form-step-1 {
     display: flex;
     flex-direction: column;
+    height: 25em;
     margin-top: 3em;
 }
 
@@ -150,7 +154,7 @@ body {
 .form-step-1 label {
     font-size: 13px;
     font-weight: 500;
-    color: var(--labelFormColor);
+    color: var(--titleFontColor);
 }
 
 .form-step-1 span {
@@ -159,15 +163,71 @@ body {
     color: var(--warningColor);
 }
 
+
 .form-step-1 input {
-    height: 3em;
-    border: 1 #00204a;
+    font-family: var(--principalFont);
+    font-size: 17px;
+    font-weight: 500;
+    height: 2.5em;
+    border-style: solid;
+    border-width: 1px;
     border-radius: 8px;
-    outline: none!important;
-    box-shadow: none;
-    /*border-color: #00204a;*/
+    border-color: var(--inputBorderColor);
+    padding: 0 0.5em;
     margin-bottom: 2em;
+    color: var(--titleFontColor);
 }
+
+.form-step-1 input:hover {
+    cursor: pointer;
+    border-color: var(--inputHoverBorderColor);
+}
+
+.form-step-1 input:focus {
+    outline-offset: 0px !important;
+    outline: none !important;
+    border-color: var(--inputHoverBorderColor);
+}
+
+.form-step-1 input::placeholder {
+    font-weight: 400;
+}
+
+.button-container {
+    align-self: flex-end;
+    margin-top: 3.5em;
+}
+
+.btn-next-step {
+    font-family: var(--principalFont);
+    font-weight: 700;
+    height: 3em;
+    width: 7.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--btnColor);
+    color: var(--whiteColor);
+}
+
+.btn-next-step:hover {
+    cursor: pointer;
+    background-color: var(--btnHoverColor);
+}
+
+
+
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* --------------- Mudar estilo da borda do input  ------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+
+
+
+
 
 
 
