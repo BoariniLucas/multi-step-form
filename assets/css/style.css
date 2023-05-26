@@ -25,6 +25,7 @@
     --selectedStepNumber: #00204a;
     --titleFontColor: #00204a;
     --warningColor: #e23349;
+    --warningBorderColor: #9e5b64;
     --inputBorderColor: #d9d8dc;
     --inputHoverBorderColor: #554f95;
     --btnColor: #03295a;
@@ -158,6 +159,7 @@ body {
 }
 
 .form-step-1 span {
+    visibility: hidden;
     font-size: 14px;
     font-weight: 700;
     color: var(--warningColor);
@@ -193,6 +195,23 @@ body {
     font-weight: 400;
 }
 
+.warningBorder {
+    border-color: var(--warningBorderColor)!important;
+    
+}
+
+#span-name {
+    visibility: hidden;
+}
+
+#span-email {
+    visibility: hidden;
+}
+
+#span-number {
+    visibility: hidden;
+}
+
 .button-container {
     align-self: flex-end;
     margin-top: 3.5em;
@@ -220,7 +239,7 @@ body {
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
-/* --------------- Mudar estilo da borda do input  ------------ */
+/* --------- Fazer verificação do formulário passo 1  --------- */
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
