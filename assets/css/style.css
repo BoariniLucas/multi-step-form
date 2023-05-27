@@ -30,6 +30,11 @@
     --inputHoverBorderColor: #554f95;
     --btnColor: #03295a;
     --btnHoverColor: #174a8b;
+    --planBordeColor: #dbdbdd;
+    --planSelectedBorderColor: #544d98;
+    --planSelectedBgColor: #f8f9fe;
+    --bgToggleColor: #032958;
+    --textToggleColor: #95959f;
 }
 
 body {
@@ -212,18 +217,15 @@ body {
     visibility: hidden;
 }
 
-.button-container {
-    align-self: flex-end;
-    margin-top: 3.5em;
-}
-
 .btn-next-step {
+    align-self: flex-end;
     font-family: var(--principalFont);
     font-weight: 700;
     height: 3em;
     width: 7.5em;
     border: none;
     border-radius: 5px;
+    margin-top: 3.5em;
     background-color: var(--btnColor);
     color: var(--whiteColor);
 }
@@ -233,16 +235,197 @@ body {
     background-color: var(--btnHoverColor);
 }
 
+.form-step-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.form-step-2 h1, p {
+    align-self: flex-start;
+    margin: 0;
+}
+
+.form-step-2 p {
+    margin-bottom: 3em;
+}
+
+.form-container-step-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plans label {
+
+    width: 8.5em;
+    border: 1px solid var(--planBordeColor);
+    border-radius: 8px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+.plans input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1000;
+ }
+
+ .plans label:hover {
+    cursor: pointer;
+    border-color: var(--planSelectedBorderColor);
+ }
+
+.plans input:checked + label {
+    background-color: var(--planSelectedBgColor);
+    border-color: var(--planSelectedBorderColor);
+ }
+
+.plans h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 3em;
+    color: var(--titleFontColor);
+}
+
+.plans p {
+    font-size: 13px;
+    margin-bottom: 0.5em;
+}
+
+.plans span {
+    font-size: 13px;
+    color: var(--titleFontColor);
+}
+
+.plans label div {
+    display: none;
+    margin-top: 0.5em;
+}
+
+.yearly-option label div {
+    display: block;
+}
+
+.advanced-plan {
+    margin: 0 1.12em;
+}
+
+.plan-time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1.5em;
+    background-color: var(--planSelectedBgColor);
+}
+
+.switch-toggle-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--textToggleColor);
+}
+
+.toggle-text-selected {
+    color: var(--titleFontColor);
+}
+
+.switch-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    height: 1em;
+    width: 1.8em;
+    margin: 0 1em;
+    background: var(--bgToggleColor);
+}
+
+.switch-toggle label {
+    position: relative;
+    align-self: center;
+    height: 0.7em;
+    width: 0.7em;
+    border-radius: 15px;
+ }
+
+ .switch-toggle label:hover {
+    cursor: pointer;
+ }
+
+.switch-toggle input {
+    position: absolute;
+    margin: 1px;
+    opacity: 0;
+    z-index: -1000;
+ }
+
+ .switch-toggle input:hover {
+    cursor: pointer;
+ }
+
+ .switch-toggle input:checked + label {
+    background: var(--whiteColor);
+ }
+
+ .switch-toggle input:checked + label:hover {
+    background: var(--planSelectedBgColor);
+    cursor: pointer;
+ }
 
 
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 0.8em;
+}
+
+.button-container button {
+    margin-top: 0;
+}
+
+.btn-go-back {
+    font-family: var(--principalFont);
+    font-weight: 700;
+    height: 3em;
+    width: 7.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
-/* --------- Fazer verificação do formulário passo 1  --------- */
+/* -- Implementar funções nos botões "go back" e "next step" -- */
+/* --------------------------step-2---------------------------- */
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
-/* ------------------------------------------------------------ */
+
+
 
 
 
@@ -251,11 +434,11 @@ body {
 
 
 .f-step-1 {
-    display: flex;
+    display: none;
 }
 
 .f-step-2 {
-    display: none;
+    display: flex;
 }
 
 .f-step-3 {

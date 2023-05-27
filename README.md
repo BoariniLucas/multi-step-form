@@ -19,9 +19,10 @@ O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em 
 - [X] Montar estrutura básica do formulário;
 - [X] Desenvolvimento do Sidebar Desktop;
 - [X] Design passo 1 do formulário;
-- [ ] Validação dos campos do formulário passo 1;
-- [ ] Passo 2 do formulário mensal;
-- [ ] Passo 2 do formulário anual;
+- [X] Validação dos campos do formulário passo 1;
+- [X] Design passo 2 do formulário;
+- [X] Implementar função no toggle de planos anuais ou mensais passo 2;
+- [ ] Desenvolver funções para botão “go back” e “next step” passo 2;
 - [ ] Passo 3 do formulário mensal;
 - [ ] Passo 3 do formulário anual;
 - [ ] Passo 4 do formulário mensal;

@@ -18,7 +18,7 @@
       <div class="sidebar">
 
         <div class="step">
-          <div class="step-number step-selected">1</div>
+          <div id="sidebar-step1" class="step-number step-selected">1</div>
           <p class="step-title">
             <strong>step 1</strong>
             your info
@@ -26,7 +26,7 @@
         </div>
 
         <div class="step">
-          <div class="step-number">2</div>
+          <div id="sidebar-step2" class="step-number">2</div>
           <p class="step-title">
             <strong>step 2</strong>
             select plan
@@ -34,7 +34,7 @@
         </div>
 
         <div class="step">
-          <div class="step-number">3</div>
+          <div id="sidebar-step3" class="step-number">3</div>
           <p class="step-title">
             <strong>step 3</strong>
             add-ons
@@ -42,7 +42,7 @@
         </div>
 
         <div class="step">
-          <div class="step-number">4</div>
+          <div id="sidebar-step4" class="step-number">4</div>
           <p class="step-title">
             <strong>step 4</strong>
             summary
@@ -76,17 +76,73 @@
             <input id="input-tel" type="tel" placeholder="e.g. +1 234 567 890" 
                 onkeypress="return event.charCode >= 48 && event.charCode <= 57">
 
-            <div class="button-container">
               <button id="btn-next-step-1" class="btn-next-step">Next Step</button>
-            </div> 
           </div>          
         </div>        
       </form>
 
       <form class="form-step f-step-2">
-        <div class="form-container">
-          <h1>Select your plan</h1>
+        <div class="form-container form-container-step-2">         
 
+          <div class="form-step-2">
+            <h1>Select your plan</h1>
+            <p>You have the option of monthly or yearly billing.</p>
+
+            <div class="plans">
+              <input id="rb-arcade" name="plans-options" type="radio" checked>
+              <label class="arcade-plan" for="rb-arcade">
+                <img src="./assets/images/icon-arcade.svg">
+                <h2>Arcade</h2>
+                <p id="arcade-value">$9/mo</p>
+
+                <div>                  
+                  <span>2 months free</span>  
+                </div>                              
+              </label>
+                
+              <input id="rb-advanced" name="plans-options" type="radio">
+              <label class="advanced-plan" for="rb-advanced">
+                <img src="./assets/images/icon-advanced.svg">
+                <h2>Advanced</h2>
+                <p id="advanced-value">$12/mo</p>
+
+                <div>                  
+                  <span>2 months free</span>  
+                </div>
+              </label>
+                
+              <input id="rb-pro" name="plans-options" type="radio">
+              <label class="pro-plan" for="rb-pro">
+                <img src="./assets/images/icon-pro.svg">
+                <h2>Pro</h2>
+                <p id="pro-value">$15/mo</p>
+
+                <div>                  
+                  <span>2 months free</span>  
+                </div>
+              </label>                
+            </div>            
+
+            <div class="plan-time">
+
+              <h2 id="monthly-plan" class="switch-toggle-text toggle-text-selected">Monthly</h2>
+
+              <div class="switch-toggle">
+                <input id="rb-monthly" name="time-options" type="radio" checked>
+                <label for="rb-monthly" onclick="monthlyPlan()"></label>
+
+                <input id="rb-yearly" name="time-options" type="radio">
+                <label for="rb-yearly" onclick="yearlyPlan()"></label>
+              </div>
+
+              <h2 id="yearly-plan" class="switch-toggle-text">Yearly</h2>
+            </div>  
+          </div>  
+          
+          <div class="button-container">
+            <button class="btn-go-back">Go Back</button>
+            <button id="btn-next-step-1" class="btn-next-step">Next Step</button>
+          </div> 
         </div>
       </form>
 
