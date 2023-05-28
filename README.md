@@ -22,9 +22,8 @@ O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em 
 - [X] Validação dos campos do formulário passo 1;
 - [X] Design passo 2 do formulário;
 - [X] Implementar função no toggle de planos anuais ou mensais passo 2;
-- [ ] Desenvolver funções para botão “go back” e “next step” passo 2;
-- [ ] Passo 3 do formulário mensal;
-- [ ] Passo 3 do formulário anual;
+- [X] Desenvolver funções para botão “go back” e “next step” passo 2;
+- [ ] Design passo 3 do formulário;
 - [ ] Passo 4 do formulário mensal;
 - [ ] Passo 4 do formulário anual;
 - [ ] Mensagem de agradecimento;

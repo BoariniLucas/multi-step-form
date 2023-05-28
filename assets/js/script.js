@@ -4,6 +4,8 @@ const sidebarStep3 = document.querySelector('#sidebar-step3');
 const sidebarStep4 = document.querySelector('#sidebar-step4');
 
 const btnNextStep1 = document.querySelector('#btn-next-step-1');
+const btnNextStep2 = document.querySelector('#btn-next-step-2');
+const btnGoBack2 = document.querySelector('#btn-go-back2');
 const inputName = document.querySelector('#input-name');
 const inputEmail = document.querySelector('#input-email');
 const inputTel = document.querySelector('#input-tel');
@@ -12,10 +14,9 @@ const rbArcade = document.querySelector('#rb-arcade');
 const rbAdvanced = document.querySelector('#rb-advanced');
 const rbPro = document.querySelector('#rb-pro');
 
-
-
-
+const timeOption  = "";
 const stepForm = 1;
+
 
 
 /* ---------------------------------- */
@@ -44,6 +45,35 @@ btnNextStep1.addEventListener('click', (e) => {
         alert("Check Fields")
     }
 });
+
+btnNextStep2.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const step2 = document.querySelector('.f-step-2');
+    const step3 = document.querySelector('.f-step-3');
+
+    step2.style.display = "none";
+    step3.style.display = "flex";
+
+    sidebarStep2.classList.remove('step-selected');
+    sidebarStep3.classList.add('step-selected');
+});
+
+btnGoBack2.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const step2 = document.querySelector('.f-step-2');
+    const step1 = document.querySelector('.f-step-1');    
+
+    step2.style.display = "none";
+    step1.style.display = "flex";
+
+    sidebarStep2.classList.remove('step-selected');
+    sidebarStep1.classList.add('step-selected');
+    
+});
+
+
 
 /* --------------------------------- */
 /* ----------- Functions ----------- */
@@ -92,9 +122,7 @@ function formValidation() {
         return true;
     } else {
         return false;
-    }
-
-    
+    }    
 }
 
 function addAlert(mAlert, bAlert) {
@@ -115,13 +143,14 @@ function monthlyPlan() {
     const advancedValue = document.querySelector('#advanced-value');
     const proValue = document.querySelector('#pro-value');
 
-
     yearlyPlan.classList.remove('toggle-text-selected');
     monthlyPlan.classList.add('toggle-text-selected');
     plans.classList.remove('yearly-option');
     arcadeValue.innerHTML = "$9/mo";
     advancedValue.innerHTML = "$12/mo";
     proValue.innerHTML = "$15/mo";
+
+    timeOption = "monthly"
 }
 
 function yearlyPlan() {
@@ -138,4 +167,6 @@ function yearlyPlan() {
     arcadeValue.innerHTML = "$90/yr";
     advancedValue.innerHTML = "$120/yr";
     proValue.innerHTML = "$150/yr";
+
+    timeOption = "yearly"
 }

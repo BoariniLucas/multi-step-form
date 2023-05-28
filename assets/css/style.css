@@ -381,8 +381,6 @@ body {
     cursor: pointer;
  }
 
-
-
 .button-container {
     display: flex;
     justify-content: space-between;
@@ -401,8 +399,13 @@ body {
     width: 7.5em;
     border: none;
     border-radius: 5px;
+    color: var(--textToggleColor);
     background-color: transparent;
-    opacity: 0.6;
+}
+
+.btn-go-back:hover {
+    cursor: pointer;
+    color: var(--titleFontColor);
 }
 
 
@@ -434,11 +437,11 @@ body {
 
 
 .f-step-1 {
-    display: none;
+    display: flex;
 }
 
 .f-step-2 {
-    display: flex;
+    display: none;
 }
 
 .f-step-3 {
