@@ -10,12 +10,20 @@ const inputName = document.querySelector('#input-name');
 const inputEmail = document.querySelector('#input-email');
 const inputTel = document.querySelector('#input-tel');
 
+const onlineServIput = document.querySelector('#online-service-input');
+const lgStorageInput = document.querySelector('#larger-storage-input');
+const customizableInput = document.querySelector('#customizable-input');
+
 const rbArcade = document.querySelector('#rb-arcade');
 const rbAdvanced = document.querySelector('#rb-advanced');
 const rbPro = document.querySelector('#rb-pro');
 
 const timeOption  = "";
 const stepForm = 1;
+
+let onlineService = false;
+let largerStorage = false;
+let customizable  = false;
 
 
 
@@ -72,6 +80,66 @@ btnGoBack2.addEventListener('click', (e) => {
     sidebarStep1.classList.add('step-selected');
     
 });
+
+onlineServIput.addEventListener('change', () => {
+
+    setItemSelected('#box-online-serv', '#online-service');
+    setItemSelectedControl('#box-online-serv');
+
+    console.log('online ' + onlineService);
+});
+
+lgStorageInput.addEventListener('change', () => {
+
+    setItemSelected('#box-lg-storage', '#larger-storage');    
+    setItemSelectedControl('#box-lg-storage');
+
+    console.log('large ' + largerStorage);
+});
+
+customizableInput.addEventListener('change', () => {
+
+    setItemSelected('#box-customizable','#customizable');
+    setItemSelectedControl('#box-customizable');
+
+    console.log('custom ' + customizable);
+});
+
+
+function setItemSelected(idBox, idCK) {
+
+    const addOnsItem = document.querySelector(idBox);
+    const checkboxDiv = document.querySelector(idCK);
+
+    checkboxDiv.classList.toggle('cb-checked');
+    addOnsItem.classList.toggle('box-checked');
+}
+
+function setItemSelectedControl(item) {
+
+    const boxSelected = document.querySelector(item);
+
+    if(boxSelected.classList.contains('online')) {
+        if(boxSelected.classList.contains('box-checked')) {
+            onlineService = true;
+        } else {
+            onlineService = false;
+        }
+
+    } else if(boxSelected.classList.contains('storage')) {
+        if(boxSelected.classList.contains('box-checked')) {
+            largerStorage = true;
+        } else {
+            largerStorage = false;
+        }
+    } else if(boxSelected.classList.contains('custom')) {
+        if(boxSelected.classList.contains('box-checked')) {
+            customizable = true;
+        } else {
+            customizable = false;
+        }
+    }    
+}
 
 
 
