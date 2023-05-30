@@ -6,6 +6,10 @@ const sidebarStep4 = document.querySelector('#sidebar-step4');
 const btnNextStep1 = document.querySelector('#btn-next-step-1');
 const btnNextStep2 = document.querySelector('#btn-next-step-2');
 const btnGoBack2 = document.querySelector('#btn-go-back2');
+const btnNextStep3 = document.querySelector('#btn-next-step-3');   
+const btnGoBack3 = document.querySelector('#btn-go-back3');
+
+
 const inputName = document.querySelector('#input-name');
 const inputEmail = document.querySelector('#input-email');
 const inputTel = document.querySelector('#input-tel');
@@ -105,41 +109,42 @@ customizableInput.addEventListener('change', () => {
     console.log('custom ' + customizable);
 });
 
+btnNextStep3.addEventListener('click', (e) => {
+    e.preventDefault();
 
-function setItemSelected(idBox, idCK) {
+    const step3 = document.querySelector('.f-step-3');
+    const step4 = document.querySelector('.f-step-4');    
+    
+    step3.style.display = "none";
+    step4.style.display = "flex";
+    
+    sidebarStep3.classList.remove('step-selected');
+    sidebarStep4.classList.add('step-selected');
+});
 
-    const addOnsItem = document.querySelector(idBox);
-    const checkboxDiv = document.querySelector(idCK);
 
-    checkboxDiv.classList.toggle('cb-checked');
-    addOnsItem.classList.toggle('box-checked');
-}
 
-function setItemSelectedControl(item) {
 
-    const boxSelected = document.querySelector(item);
+btnGoBack3.addEventListener('click', (e) => {
+    e.preventDefault();
 
-    if(boxSelected.classList.contains('online')) {
-        if(boxSelected.classList.contains('box-checked')) {
-            onlineService = true;
-        } else {
-            onlineService = false;
-        }
+    const step3 = document.querySelector('.f-step-3');
+    const step2 = document.querySelector('.f-step-2');    
+    
+    step3.style.display = "none";
+    step2.style.display = "flex";
+    
+    sidebarStep3.classList.remove('step-selected');
+    sidebarStep2.classList.add('step-selected');
+});
 
-    } else if(boxSelected.classList.contains('storage')) {
-        if(boxSelected.classList.contains('box-checked')) {
-            largerStorage = true;
-        } else {
-            largerStorage = false;
-        }
-    } else if(boxSelected.classList.contains('custom')) {
-        if(boxSelected.classList.contains('box-checked')) {
-            customizable = true;
-        } else {
-            customizable = false;
-        }
-    }    
-}
+
+
+
+
+
+
+
 
 
 
@@ -237,4 +242,39 @@ function yearlyPlan() {
     proValue.innerHTML = "$150/yr";
 
     timeOption = "yearly"
+}
+
+function setItemSelected(idBox, idCK) {
+
+    const addOnsItem = document.querySelector(idBox);
+    const checkboxDiv = document.querySelector(idCK);
+
+    checkboxDiv.classList.toggle('cb-checked');
+    addOnsItem.classList.toggle('box-checked');
+}
+
+function setItemSelectedControl(item) {
+
+    const boxSelected = document.querySelector(item);
+
+    if(boxSelected.classList.contains('online')) {
+        if(boxSelected.classList.contains('box-checked')) {
+            onlineService = true;
+        } else {
+            onlineService = false;
+        }
+
+    } else if(boxSelected.classList.contains('storage')) {
+        if(boxSelected.classList.contains('box-checked')) {
+            largerStorage = true;
+        } else {
+            largerStorage = false;
+        }
+    } else if(boxSelected.classList.contains('custom')) {
+        if(boxSelected.classList.contains('box-checked')) {
+            customizable = true;
+        } else {
+            customizable = false;
+        }
+    }    
 }
