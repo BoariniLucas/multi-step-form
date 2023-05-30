@@ -36,6 +36,7 @@
     --bgToggleColor: #032958;
     --textToggleColor: #95959f;
     --checkedColor : #473eff;
+    --addOnsPrice: #434346;
 }
 
 body {
@@ -426,7 +427,31 @@ body {
     margin: 1em 0;
     padding: 1em;
     box-sizing: border-box;
-    background-color: red;
+}
+
+.add-ons-item span {
+    opacity: 0.8;
+    color: var(--addOnsPrice);
+}
+
+.add-ons-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 3em;
+    width: 70%;
+}
+
+.add-ons-text h3 {
+    font-weight: 500;
+    color: var(--titleFontColor);
+}
+
+.add-ons-text p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 0.3em;
+    opacity: 0.5;
 }
 
 
@@ -434,7 +459,7 @@ body {
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
-/* ------ Cotinuar desse ponto, finalizaar design passo 3 ----- */
+/* Implementar funções para botão “go back” e “next step” passo 3*/
 /* --------------------------step-3---------------------------- */
 /* ------------------------------------------------------------ */
 /* ------------------------------------------------------------ */
