@@ -8,6 +8,8 @@ const btnNextStep2 = document.querySelector('#btn-next-step-2');
 const btnGoBack2 = document.querySelector('#btn-go-back2');
 const btnNextStep3 = document.querySelector('#btn-next-step-3');   
 const btnGoBack3 = document.querySelector('#btn-go-back3');
+const btnNextStep4 = document.querySelector('#btn-next-step-4');   
+const btnGoBack4 = document.querySelector('#btn-go-back4');
 
 
 const inputName = document.querySelector('#input-name');
@@ -122,9 +124,6 @@ btnNextStep3.addEventListener('click', (e) => {
     sidebarStep4.classList.add('step-selected');
 });
 
-
-
-
 btnGoBack3.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -136,6 +135,29 @@ btnGoBack3.addEventListener('click', (e) => {
     
     sidebarStep3.classList.remove('step-selected');
     sidebarStep2.classList.add('step-selected');
+});
+
+btnNextStep4.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const step4 = document.querySelector('.f-step-4');
+    const tanksPage = document.querySelector('.tanks-page');
+    
+    step4.style.display = "none";
+    tanksPage.style.display = "flex";
+});
+
+btnGoBack4.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const step3 = document.querySelector('.f-step-3');
+    const step4 = document.querySelector('.f-step-4');    
+    
+    step3.style.display = "flex";
+    step4.style.display = "none";
+    
+    sidebarStep4.classList.remove('step-selected');
+    sidebarStep3.classList.add('step-selected');
 });
 
 
