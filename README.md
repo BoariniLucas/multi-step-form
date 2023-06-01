@@ -28,7 +28,7 @@ O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em 
 - [X] Implementar funções para botão “go back” e “next step” passo 3;
 - [X] Design passo 4 do formulário;
 - [X] Funções botões passo 4;
-- [ ] Design da página de agradecimento;
+- [X] Design da página de agradecimento (passo 5);
 - [ ] Desenvolver métodos para controle de opções escolhidas pelo usuário;
 - [ ] Criar funçãos para exibir escolas do usuário no resumo final;
 - [ ] Mensagem de agradecimento;

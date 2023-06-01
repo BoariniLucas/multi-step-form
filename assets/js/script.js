@@ -141,10 +141,10 @@ btnNextStep4.addEventListener('click', (e) => {
     e.preventDefault();
 
     const step4 = document.querySelector('.f-step-4');
-    const tanksPage = document.querySelector('.tanks-page');
+    const step5 = document.querySelector('.step-5');
     
     step4.style.display = "none";
-    tanksPage.style.display = "flex";
+    step5.style.display = "flex";
 });
 
 btnGoBack4.addEventListener('click', (e) => {
