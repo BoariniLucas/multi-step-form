@@ -20,7 +20,7 @@ O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em 
 - [X] Desenvolvimento do Sidebar Desktop;
 - [X] Design passo 1 do formulário;
 - [X] Validação dos campos do formulário passo 1;
-- [ ] Validação de e-mail;
+- [X] Validação de e-mail;
 - [X] Design passo 2 do formulário;
 - [X] Implementar função no toggle de planos anuais ou mensais passo 2;
 - [X] Desenvolver funções para botão “go back” e “next step” passo 2;

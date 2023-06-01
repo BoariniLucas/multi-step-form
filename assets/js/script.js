@@ -52,11 +52,6 @@ btnNextStep1.addEventListener('click', (e) => {
 
         sidebarStep1.classList.remove('step-selected');
         sidebarStep2.classList.add('step-selected');
-
-        console.log("agora tá certo");
-        
-    } else {
-        alert("Check Fields")
     }
 });
 
@@ -184,34 +179,38 @@ function formValidation() {
     let emailVal = false; 
     let telVal = false; 
 
-    for (let i = 0; i < 2; i++) {
-        if(inputName.value == "") {
-            addAlert(name,inputName);
-            nameVal = false;
-
-        } else {
-            removeAlert(name,inputName);
-            nameVal = true;
-        }
-
-        if(inputEmail.value == "") {
-            addAlert(email,inputEmail);
-            emailVal = false;
-
-        } else {
-            removeAlert(email,inputEmail);
-            emailVal = true;
-        }
-
-        if(inputTel.value == "") {
-            addAlert(tel,inputTel);
-            telVal = false;
-
-        } else {
-            removeAlert(tel,inputTel);
-            telVal = true;
-        }
+    if(inputName.value == "") {
+        addAlert(name,inputName);
+        nameVal = false;
+    } else {
+        removeAlert(name,inputName);
+        nameVal = true;
     }
+    
+    if(inputTel.value == "") {
+        addAlert(tel,inputTel);
+        telVal = false;
+    } else {
+        removeAlert(tel,inputTel);
+        telVal = true;
+    }
+    
+    if(inputEmail.value == "") {
+        addAlert(email,inputEmail);
+        email.innerHTML = "This field is required";
+        emailVal = false;
+    
+    } else if(formValidationEmail()) {
+        removeAlert(email,inputEmail);
+        email.innerHTML = "This field is required";
+        emailVal = true;
+    } else {
+    
+        addAlert(email,inputEmail);
+        emailVal = false; 
+        alert("Please check your e-mail");            
+    }
+
 
     if(nameVal && emailVal && telVal) {
         return true;
@@ -299,4 +298,31 @@ function setItemSelectedControl(item) {
             customizable = false;
         }
     }    
+}
+
+function formValidationEmail() {
+
+    const email = document.querySelector('#span-email');
+
+    const usuario = inputEmail.value.substring(0, inputEmail.value.indexOf("@"));
+    const dominio = inputEmail.value.substring(inputEmail.value.indexOf("@")+ 1, inputEmail.value.length);
+        
+    if ((usuario.length >=1) &&
+        (dominio.length >=3) &&
+        (usuario.search("@")==-1) &&
+        (dominio.search("@")==-1) &&
+        (usuario.search(" ")==-1) &&
+        (dominio.search(" ")==-1) &&
+        (dominio.search(".")!=-1) &&
+        (dominio.indexOf(".") >=1)&&
+        (dominio.lastIndexOf(".") < dominio.length - 1)) {
+            removeAlert(email,inputEmail);
+            email.innerHTML = "This field is required";
+            return true;
+
+            } else {
+                addAlert(email,inputEmail);
+                email.innerHTML = "Enter a valid email address";
+                return false;               
+            }       
 }
