@@ -11,7 +11,6 @@ const btnGoBack3 = document.querySelector('#btn-go-back3');
 const btnNextStep4 = document.querySelector('#btn-next-step-4');   
 const btnGoBack4 = document.querySelector('#btn-go-back4');
 
-
 const inputName = document.querySelector('#input-name');
 const inputEmail = document.querySelector('#input-email');
 const inputTel = document.querySelector('#input-tel');
@@ -20,16 +19,26 @@ const onlineServIput = document.querySelector('#online-service-input');
 const lgStorageInput = document.querySelector('#larger-storage-input');
 const customizableInput = document.querySelector('#customizable-input');
 
-const rbArcade = document.querySelector('#rb-arcade');
-const rbAdvanced = document.querySelector('#rb-advanced');
-const rbPro = document.querySelector('#rb-pro');
+const online = document.querySelector('#add-online-price');
+const larger = document.querySelector('#add-larger-price');
+const custon = document.querySelector('#add-custon-price');
 
-const timeOption  = "";
-const stepForm = 1;
+const summaryPlan = document.querySelector('#summary-plan');
+const summaryTime = document.querySelector('#summary-time');
+const summaryPlanPrice = document.querySelector('#summary-plan-price');
+
+let timeOption = "monthly";
+let chosenPlan = 1;
+let chosenPlanPrice = 9;
 
 let onlineService = false;
 let largerStorage = false;
 let customizable  = false;
+
+let onlinePrice = 0;
+let largerPrice = 0;
+let custonPrice = 0;
+
 
 
 
@@ -53,6 +62,10 @@ btnNextStep1.addEventListener('click', (e) => {
         sidebarStep1.classList.remove('step-selected');
         sidebarStep2.classList.add('step-selected');
     }
+
+    console.log(chosenPlan);
+    console.log(timeOption);
+    console.log(chosenPlanPrice);
 });
 
 btnNextStep2.addEventListener('click', (e) => {
@@ -66,6 +79,8 @@ btnNextStep2.addEventListener('click', (e) => {
 
     sidebarStep2.classList.remove('step-selected');
     sidebarStep3.classList.add('step-selected');
+
+    loadAddPrices();
 });
 
 btnGoBack2.addEventListener('click', (e) => {
@@ -117,6 +132,8 @@ btnNextStep3.addEventListener('click', (e) => {
     
     sidebarStep3.classList.remove('step-selected');
     sidebarStep4.classList.add('step-selected');
+
+    loadSummary();
 });
 
 btnGoBack3.addEventListener('click', (e) => {
@@ -245,6 +262,11 @@ function monthlyPlan() {
     proValue.innerHTML = "$15/mo";
 
     timeOption = "monthly"
+    chosenPlanPrice = chosenPlanPrice / 10;
+    
+
+    console.log(timeOption);
+    console.log(chosenPlanPrice);
 }
 
 function yearlyPlan() {
@@ -261,8 +283,13 @@ function yearlyPlan() {
     arcadeValue.innerHTML = "$90/yr";
     advancedValue.innerHTML = "$120/yr";
     proValue.innerHTML = "$150/yr";
-
+    
     timeOption = "yearly"
+    chosenPlanPrice = chosenPlanPrice * 10;
+
+
+    console.log(timeOption);
+    console.log(chosenPlanPrice);
 }
 
 function setItemSelected(idBox, idCK) {
@@ -326,3 +353,177 @@ function formValidationEmail() {
                 return false;               
             }       
 }
+
+function arcadePlan(){
+    chosenPlan = 1;
+
+    if(timeOption != "monthly") {
+        setPrice(90);
+    } else {
+        setPrice(9);
+    }
+        
+
+    console.log("Arcade" + chosenPlan);
+    console.log(chosenPlanPrice);
+}
+
+function advancedPlan(){
+    chosenPlan = 2;
+
+    if(timeOption != "monthly") {
+        setPrice(120);
+    } else {
+        setPrice(12);
+    } 
+
+    console.log("Advanced" + chosenPlan);
+    console.log(chosenPlanPrice);
+}
+
+function proPlan(){
+    chosenPlan = 3;
+
+    if(timeOption != "monthly") {
+        setPrice(150);
+    } else {
+        setPrice(15);
+    }
+
+    console.log("Pro" + chosenPlan);
+    console.log(chosenPlanPrice);
+}
+
+function setPrice(planPrice){
+
+    if(timeOption == "monthly") {
+        chosenPlanPrice = planPrice;
+    } else if(timeOption = "yearly") {
+        chosenPlanPrice = planPrice;
+    }
+}
+
+function loadAddPrices() {
+
+    if(timeOption == "monthly") {
+        online.innerHTML = "+$1/mo";
+        onlinePrice = 1;
+
+        larger.innerHTML = "+$2/mo";
+        largerPrice = 2;
+
+        custon.innerHTML = "+$2/mo";
+        custonPrice = 2;
+
+    } else if (timeOption  == "yearly") {
+        online.innerHTML = "+$10/yr";
+        onlinePrice = 10;
+
+        larger.innerHTML = "+$20/yr";
+        largerPrice = 20;
+
+        custon.innerHTML = "+$20/yr";
+        custonPrice = 20;
+    }
+
+    console.log(onlinePrice);
+    console.log(largerPrice);
+    console.log(custonPrice);
+}
+
+function loadSummary() {
+
+    let time = "";
+
+    if(timeOption == "monthly") {
+        time = "mo";
+    } else if(timeOption == "yearly") {
+        time = "yr";
+    }
+
+    summaryTime.innerHTML = timeOption;
+
+    if(chosenPlan == 1) {
+
+        summaryPlan.innerHTML = "Arcade"
+        summaryPlanPrice.innerHTML = "$" + chosenPlanPrice + "/" + time;
+
+    } /*else if(chosenPlan == 2) {
+
+        summaryPlan.innerHTML = "Advanced"
+        summaryPlanPrice.innerHTML = "$" + "12" + "/mo";
+
+    } else if(chosenPlan == 3) {
+
+        summaryPlan.innerHTML = "Pro"
+        summaryPlanPrice.innerHTML = "$" + "15" + "/mo";
+    }*/
+
+    
+
+
+
+
+
+
+
+    /*
+    const orderResume = document.querySelector('#order-resume');
+
+    for (let i = 0; i < orderResume.length; i++) {
+        
+        
+        console.log(orderResume[i].classList);
+        
+    }*/
+
+    /*
+
+    if(onlineService) {
+        loadAddSummary("Online service", onlinePrice);
+    }
+    
+    if(largerStorage) {
+        loadAddSummary("Larger storage", largerPrice);
+    }
+    
+    if(customizable) {
+        loadAddSummary("Customizable Profile", custonPrice);
+    }*/
+}
+
+function loadAddSummary(text, price) {
+
+    const addsOnsSelected = document.getElementsByClassName('#add-on-chosen');
+
+    for (let i = 0; i < addsOnsSelected.length; i++) {
+        const element = array[i];
+        
+    }
+
+    const add = document.createElement("div");
+    add.classList.add("add-on-chosen")
+
+    const addChosen = document.createElement("p");
+    const addChosenPrice = document.createElement("span");
+
+    addChosen.innerHTML = text;
+    addChosenPrice.innerHTML = price;
+
+    add.appendChild(addChosen);
+    add.appendChild(addChosenPrice);
+
+    orderResume.appendChild(add);
+}
+
+
+
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------- Desenvolver controles das opções nos passos ---------*/
+/* ---Passo 2 pronto com escolha de plano passando para o JS--- */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
