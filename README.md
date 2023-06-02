@@ -23,15 +23,19 @@ O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em 
 - [X] Validação de e-mail;
 - [X] Design passo 2 do formulário;
 - [X] Implementar função no toggle de planos anuais ou mensais passo 2;
-- [X] Desenvolver funções para botão “go back” e “next step” passo 2;
+- [X] Desenvolver funções para botão "go back" e "next step" passo 2;
 - [X] Design passo 3 do formulário;
-- [X] Implementar funções para botão “go back” e “next step” passo 3;
+- [X] Implementar funções para botão "go back" e "next step" passo 3;
 - [X] Design passo 4 do formulário;
 - [X] Funções botões passo 4;
 - [X] Design da página de agradecimento (passo 5);
 - [X] Desenvolver métodos para controle de opções escolhidas pelo usuário;
-- [ ] Criar funçãos para exibir escolhas do usuário no resumo final;
-- [ ] Mensagem de agradecimento;
+- [X] Criar funçãos para exibir escolhas do usuário no resumo final;
+- [X] Mensagem de agradecimento;
+- [ ] Criar função para botão "change" do passo 4;
+- [ ] Validação para caso nenhuma opção for alterada (passo 2) ou escolhida (passo 3);
+- [ ] Acertar detalhes de design;
+- [ ] Documentação do projeto (comnetários);
 - [ ] Implemtar responsividade;
 
 ### Screenshot
