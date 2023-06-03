@@ -40,17 +40,19 @@
     --btnConfirm: #4a3dff;
     --btnConfirmHover: #938cfe;
     --totalPiceColor: #443bd5;
+    --shadowBoxColor: #afafaf;
 }
 
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
     font-family: var(--principalFont);
     font-size: 16px;
-    background-color: /*var(--bgColor)*/ rgb(211, 211, 211);
+    background-color: var(--bgColor);
 }
 
 .principal-form {
@@ -60,7 +62,8 @@ body {
     width: 55em;
     border-radius: 10px;
     padding: 1em;
-    box-sizing: border-box;    
+    box-sizing: border-box; 
+    box-shadow: 0px 5px 10px var(--shadowBoxColor);  
     background-color: var(--whiteColor);
 }
 
@@ -627,4 +630,17 @@ body {
     height: 5em;
     width: 28em;
     margin-top: 1em;
+}
+
+.attribution a {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 700;
+    color: var(--titleFontColor);
 }

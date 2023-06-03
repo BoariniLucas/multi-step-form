@@ -27,6 +27,8 @@ const summaryPlan = document.querySelector('#summary-plan');
 const summaryTime = document.querySelector('#summary-time');
 const summaryPlanPrice = document.querySelector('#summary-plan-price');
 
+const btnChange = document.querySelector('#btn-change');
+
 let timeOption = "monthly";
 let chosenPlan = 1;
 let chosenPlanPrice = 9;
@@ -161,6 +163,15 @@ btnGoBack4.addEventListener('click', (e) => {
     sidebarStep4.classList.remove('step-selected');
     sidebarStep3.classList.add('step-selected');
 });
+
+btnChange.addEventListener('click', (e) => {
+    console.log("teste");
+});
+
+//continuar desenvolvimento do botão change
+
+
+
 
 
 
