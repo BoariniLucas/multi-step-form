@@ -164,8 +164,9 @@ btnGoBack4.addEventListener('click', (e) => {
     sidebarStep3.classList.add('step-selected');
 });
 
-btnChange.addEventListener('click', (e) => {
-    console.log("teste");
+btnChange.addEventListener('click', () => {
+
+    reloadStep2();
 });
 
 //continuar desenvolvimento do botão change
@@ -507,4 +508,16 @@ function totalPrice() {
 
     timeTotal.innerHTML = timeOption;
     totalPrice.innerHTML = "+$" + total + "/" + timePrint();
+}
+
+function reloadStep2() {
+
+    const step4 = document.querySelector('.f-step-4');
+    const step2 = document.querySelector('.f-step-2');
+
+    step4.style.display = "none";
+    step2.style.display = "flex";
+
+    sidebarStep4.classList.remove('step-selected');
+    sidebarStep2.classList.add('step-selected');
 }

@@ -30,13 +30,13 @@ O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em 
 - [X] Funções botões passo 4;
 - [X] Design da página de agradecimento (passo 5);
 - [X] Desenvolver métodos para controle de opções escolhidas pelo usuário;
-- [X] Criar funçãos para exibir escolhas do usuário no resumo final;
+- [X] Criar funções para exibir escolhas do usuário no resumo final;
 - [X] Mensagem de agradecimento;
-- [ ] Criar função para botão "change" do passo 4;
+- [X] Criar função para botão "change" do passo 4;
 - [ ] Validação para caso nenhuma opção for alterada (passo 2) ou escolhida (passo 3);
 - [X] Acertar detalhes de design;
-- [ ] Documentação do projeto (comnetários);
-- [ ] Implemtar responsividade;
+- [ ] Documentação do projeto (comentários);
+- [ ] Implementar responsividade;
 
 ### Screenshot
 
