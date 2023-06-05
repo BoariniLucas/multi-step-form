@@ -55,6 +55,10 @@ body {
     background-color: var(--bgColor);
 }
 
+header {
+    display: none;
+}
+
 .principal-form {
     display: flex;
     justify-content: space-between;

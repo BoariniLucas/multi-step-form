@@ -1,0 +1,110 @@
+@media screen and (max-width: 375px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        font-family: var(--principalFont);
+        font-size: 16px;
+        background-color: var(--bgColor);
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+        height: 10.75em;
+        width: 100vw;
+        background: url(../images/bg-sidebar-mobile.svg);
+    }
+
+    .sidebar-mobile {
+        display: flex;
+        height: 10.75em;
+        width: 60vw;
+        margin-top: 2em;
+    }
+
+    .step {
+        justify-content: center;
+    }
+
+    .step-number {
+        font-size: 18px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .principal-form {
+        display: flex;
+        position: absolute;
+        justify-content: space-between;
+        height: 24.5em;
+        width: 92%;
+        margin-top: 6em;
+    }
+
+    .form-step {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .form-step h1 {
+        margin-top: 0;
+    }
+
+    .form-step p {
+        margin-top: 0.5;
+    }
+
+    .form-step-1 {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 1.5em;
+    }
+
+    .btn-next-step {
+        position: absolute;
+        float: right;
+        margin-top: 30em;
+    }
+    
+    .f-step-1 {
+        display: flex;
+    }
+    
+    .f-step-2 {
+        display: none;
+    }
+    
+    .f-step-3 {
+        display: none;
+    }
+    
+    .f-step-4 {
+        display: none;
+    }
+
+    .attribution {
+        display: none;
+    }
+
+
+
+
+    /*  --continuar desenvolvendo responsididade (passo 2)--  */
+
+
+
+
+
+
+}

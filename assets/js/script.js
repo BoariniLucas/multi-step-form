@@ -71,13 +71,29 @@ btnNextStep2.addEventListener('click', (e) => {
     const step2 = document.querySelector('.f-step-2');
     const step3 = document.querySelector('.f-step-3');
 
-    step2.style.display = "none";
-    step3.style.display = "flex";
+    if(timeOption == "monthly" && chosenPlan == 1){
 
-    sidebarStep2.classList.remove('step-selected');
-    sidebarStep3.classList.add('step-selected');
+        var x = confirm("Would you like to keep the default option?");
+        if (x==true) {
+            
+            step2.style.display = "none";
+            step3.style.display = "flex";
+        
+            sidebarStep2.classList.remove('step-selected');
+            sidebarStep3.classList.add('step-selected');
+        
+            loadAddPrices();
+        }
+    } else {
 
-    loadAddPrices();
+        step2.style.display = "none";
+        step3.style.display = "flex";
+    
+        sidebarStep2.classList.remove('step-selected');
+        sidebarStep3.classList.add('step-selected');
+    
+        loadAddPrices();
+    }
 });
 
 btnGoBack2.addEventListener('click', (e) => {
@@ -115,17 +131,34 @@ btnNextStep3.addEventListener('click', (e) => {
     e.preventDefault();
 
     const step3 = document.querySelector('.f-step-3');
-    const step4 = document.querySelector('.f-step-4');    
-    
-    step3.style.display = "none";
-    step4.style.display = "flex";
-    
-    sidebarStep3.classList.remove('step-selected');
-    sidebarStep4.classList.add('step-selected');
+    const step4 = document.querySelector('.f-step-4');   
 
-    loadPlanSummary();
-    loadAddSummary();
-    totalPrice();
+    if(!onlineService && !largerStorage && !customizable){
+
+        var x = confirm("Make sure you don't need any add!");
+        if (x==false) {
+            step3.style.display = "none";
+            step4.style.display = "flex";
+            
+            sidebarStep3.classList.remove('step-selected');
+            sidebarStep4.classList.add('step-selected');
+        
+            loadPlanSummary();
+            loadAddSummary();
+            totalPrice();                        
+        }
+    } else {
+
+        step3.style.display = "none";
+        step4.style.display = "flex";
+        
+        sidebarStep3.classList.remove('step-selected');
+        sidebarStep4.classList.add('step-selected');
+    
+        loadPlanSummary();
+        loadAddSummary();
+        totalPrice();
+    }
 });
 
 btnGoBack3.addEventListener('click', (e) => {
@@ -168,12 +201,6 @@ btnChange.addEventListener('click', () => {
 
     reloadStep2();
 });
-
-//continuar desenvolvimento do botão change
-
-
-
-
 
 
 /* --------------------------------- */

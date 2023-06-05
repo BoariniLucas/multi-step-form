@@ -33,10 +33,11 @@ O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em 
 - [X] Criar funções para exibir escolhas do usuário no resumo final;
 - [X] Mensagem de agradecimento;
 - [X] Criar função para botão "change" do passo 4;
-- [ ] Validação para caso nenhuma opção for alterada (passo 2) ou escolhida (passo 3);
+- [X] Validação para caso nenhuma opção for alterada (passo 2) ou escolhida (passo 3);
 - [X] Acertar detalhes de design;
-- [ ] Documentação do projeto (comentários);
 - [ ] Implementar responsividade;
+- [ ] Documentação do projeto (comentários);
+
 
 ### Screenshot
 
