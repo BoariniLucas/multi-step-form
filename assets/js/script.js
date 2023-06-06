@@ -3,6 +3,11 @@ const sidebarStep2 = document.querySelector('#sidebar-step2');
 const sidebarStep3 = document.querySelector('#sidebar-step3');
 const sidebarStep4 = document.querySelector('#sidebar-step4');
 
+const sidebarStep1Mob = document.querySelector('#sidebar-step1-mob');
+const sidebarStep2Mob = document.querySelector('#sidebar-step2-mob');
+const sidebarStep3Mob = document.querySelector('#sidebar-step3-mob');
+const sidebarStep4Mob = document.querySelector('#sidebar-step4-mob');
+
 const btnNextStep1 = document.querySelector('#btn-next-step-1');
 const btnNextStep2 = document.querySelector('#btn-next-step-2');
 const btnGoBack2 = document.querySelector('#btn-go-back2');
@@ -62,6 +67,9 @@ btnNextStep1.addEventListener('click', (e) => {
 
         sidebarStep1.classList.remove('step-selected');
         sidebarStep2.classList.add('step-selected');
+
+        sidebarStep1Mob.classList.remove('step-selected');
+        sidebarStep2Mob.classList.add('step-selected');
     }
 });
 
@@ -81,6 +89,9 @@ btnNextStep2.addEventListener('click', (e) => {
         
             sidebarStep2.classList.remove('step-selected');
             sidebarStep3.classList.add('step-selected');
+
+            sidebarStep2Mob.classList.remove('step-selected');
+            sidebarStep3Mob.classList.add('step-selected');
         
             loadAddPrices();
         }
@@ -91,6 +102,9 @@ btnNextStep2.addEventListener('click', (e) => {
     
         sidebarStep2.classList.remove('step-selected');
         sidebarStep3.classList.add('step-selected');
+
+        sidebarStep2Mob.classList.remove('step-selected');
+        sidebarStep3Mob.classList.add('step-selected');
     
         loadAddPrices();
     }
@@ -107,6 +121,9 @@ btnGoBack2.addEventListener('click', (e) => {
 
     sidebarStep2.classList.remove('step-selected');
     sidebarStep1.classList.add('step-selected');
+
+    sidebarStep2Mob.classList.remove('step-selected');
+    sidebarStep1Mob.classList.add('step-selected');
 });
 
 onlineServIput.addEventListener('change', () => {
@@ -142,6 +159,9 @@ btnNextStep3.addEventListener('click', (e) => {
             
             sidebarStep3.classList.remove('step-selected');
             sidebarStep4.classList.add('step-selected');
+
+            sidebarStep3Mob.classList.remove('step-selected');
+            sidebarStep4Mob.classList.add('step-selected')
         
             loadPlanSummary();
             loadAddSummary();
@@ -154,6 +174,9 @@ btnNextStep3.addEventListener('click', (e) => {
         
         sidebarStep3.classList.remove('step-selected');
         sidebarStep4.classList.add('step-selected');
+
+        sidebarStep3Mob.classList.remove('step-selected');
+        sidebarStep4Mob.classList.add('step-selected');
     
         loadPlanSummary();
         loadAddSummary();
@@ -172,6 +195,9 @@ btnGoBack3.addEventListener('click', (e) => {
     
     sidebarStep3.classList.remove('step-selected');
     sidebarStep2.classList.add('step-selected');
+
+    sidebarStep3Mob.classList.remove('step-selected');
+    sidebarStep2Mob.classList.add('step-selected');
 });
 
 btnNextStep4.addEventListener('click', (e) => {
@@ -195,6 +221,9 @@ btnGoBack4.addEventListener('click', (e) => {
     
     sidebarStep4.classList.remove('step-selected');
     sidebarStep3.classList.add('step-selected');
+
+    sidebarStep4Mob.classList.remove('step-selected');
+    sidebarStep3Mob.classList.add('step-selected');
 });
 
 btnChange.addEventListener('click', () => {
@@ -547,4 +576,7 @@ function reloadStep2() {
 
     sidebarStep4.classList.remove('step-selected');
     sidebarStep2.classList.add('step-selected');
+
+    sidebarStep4Mob.classList.remove('step-selected');
+    sidebarStep2Mob.classList.add('step-selected');
 }

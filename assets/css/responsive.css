@@ -41,10 +41,8 @@
     }
 
     .principal-form {
-        display: flex;
         position: absolute;
-        justify-content: space-between;
-        height: 24.5em;
+        height: max-content;
         width: 92%;
         margin-top: 6em;
     }
@@ -65,8 +63,6 @@
     }
 
     .form-step-1 {
-        display: flex;
-        flex-direction: column;
         height: 100%;
         margin-top: 1.5em;
     }
@@ -75,6 +71,67 @@
         position: absolute;
         float: right;
         margin-top: 30em;
+    }
+
+    .form-step-2 {
+        width: 100%;
+        margin-top: 0.8em;
+    }
+
+    .form-step-2 p {
+        margin: 0.5em 0 1em 0;
+    }
+
+    .plans {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .plans label {
+        display: flex;
+        width: 20em;
+        margin: 0.5em 0;
+    }
+
+    .plans h2 {
+        margin-top: 0;
+    }
+
+    .plans a {
+        margin-left: 1em;
+    }
+
+    .plans a p {
+        margin: 0;
+        margin-top: 0.6em;
+    }
+
+    .plans a div {
+        margin-top: 0.2em;
+    }
+
+    .advanced-plan {
+        margin: 0;
+    }
+
+    .button-container {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        height: 4em;        
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0.8em;
+        box-sizing: border-box;        
+        background-color: var(--whiteColor);
+    }
+
+    .btn-n-s-2 {
+        position: relative;
+    }
+    
+    .btn-go-back2 {
+        float: right;
     }
     
     .f-step-1 {
@@ -91,6 +148,18 @@
     
     .f-step-4 {
         display: none;
+    }
+
+    .step-5 {
+        display: none;
+        width: 100%;
+    }
+
+    .step-5 div {
+        height: 5em;
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 2em;
     }
 
     .attribution {

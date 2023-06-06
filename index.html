@@ -18,19 +18,19 @@
       <div class="sidebar-mobile">
 
         <div class="step">
-          <div id="sidebar-step1" class="step-number step-selected">1</div>         
+          <div id="sidebar-step1-mob" class="step-number step-selected">1</div>         
         </div>
 
         <div class="step">
-          <div id="sidebar-step2" class="step-number">2</div>         
+          <div id="sidebar-step2-mob" class="step-number">2</div>         
         </div>
 
         <div class="step">
-          <div id="sidebar-step3" class="step-number">3</div>        
+          <div id="sidebar-step3-mob" class="step-number">3</div>        
         </div>
 
         <div class="step">
-          <div id="sidebar-step4" class="step-number">4</div>        
+          <div id="sidebar-step4-mob" class="step-number">4</div>        
         </div>
       </div>
     </header>
@@ -113,35 +113,44 @@
               <input id="rb-arcade" name="plans-options" type="radio" checked onclick="arcadePlan()">
               <label class="arcade-plan" for="rb-arcade">
                 <img src="./assets/images/icon-arcade.svg">
-                <h2>Arcade</h2>
-                <p id="arcade-value">$9/mo</p>
+                <a>
+                  <h2>Arcade</h2>
+                  <p id="arcade-value">$9/mo</p>
 
-                <div>                  
-                  <span>2 months free</span>  
-                </div>                              
-              </label>
+                  <div>                  
+                    <span>2 months free</span>  
+                  </div> 
+                </a>               
+                             
+              </label>              
                 
               <input id="rb-advanced" name="plans-options" type="radio" onclick="advancedPlan()">
               <label class="advanced-plan" for="rb-advanced">
                 <img src="./assets/images/icon-advanced.svg">
-                <h2>Advanced</h2>
-                <p id="advanced-value">$12/mo</p>
+                <a>
+                  <h2>Advanced</h2>
+                  <p id="advanced-value">$12/mo</p>
 
-                <div>                  
-                  <span>2 months free</span>  
-                </div>
+                  <div>                  
+                    <span>2 months free</span>  
+                  </div>
+                </a>
+
               </label>
                 
               <input id="rb-pro" name="plans-options" type="radio" onclick="proPlan()">
               <label class="pro-plan" for="rb-pro">
                 <img src="./assets/images/icon-pro.svg">
-                <h2>Pro</h2>
-                <p id="pro-value">$15/mo</p>
+                <a>
+                  <h2>Pro</h2>
+                  <p id="pro-value">$15/mo</p>
 
-                <div>                  
-                  <span>2 months free</span>  
-                </div>
-              </label>                
+                  <div>                  
+                    <span>2 months free</span>  
+                  </div>
+                </a>
+                
+              </label>             
             </div>            
 
             <div class="plan-time">
@@ -162,7 +171,7 @@
           
           <div class="button-container">
             <button id="btn-go-back2" class="btn-go-back">Go Back</button>
-            <button id="btn-next-step-2" class="btn-next-step">Next Step</button>
+            <button id="btn-next-step-2" class="btn-next-step btn-n-s-2">Next Step</button>
           </div> 
         </div>
       </form>
@@ -216,7 +225,7 @@
 
           <div class="button-container">
             <button id="btn-go-back3" class="btn-go-back">Go Back</button>
-            <button id="btn-next-step-3" class="btn-next-step">Next Step</button>
+            <button id="btn-next-step-3" class="btn-next-step btn-n-s-2">Next Step</button>
           </div> 
         </div>
       </form>
@@ -260,7 +269,7 @@
 
           <div class="button-container">
             <button id="btn-go-back4" class="btn-go-back">Go Back</button>
-            <button id="btn-next-step-4" class="btn-next-step btn-confirm">Confirm</button>
+            <button id="btn-next-step-4" class="btn-next-step btn-confirm btn-n-s-2">Confirm</button>
           </div>
         </div>
       </form>

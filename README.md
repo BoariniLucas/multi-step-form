@@ -35,7 +35,7 @@ O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em 
 - [X] Criar função para botão "change" do passo 4;
 - [X] Validação para caso nenhuma opção for alterada (passo 2) ou escolhida (passo 3);
 - [X] Acertar detalhes de design;
-- [ ] Implementar responsividade;
+- [X] Implementar responsividade;
 - [ ] Documentação do projeto (comentários);
 
 
