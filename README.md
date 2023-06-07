@@ -36,14 +36,12 @@ O desenvolvimento desse projeto irá me ajudar a aprimorar meus conhecimento em 
 - [X] Validação para caso nenhuma opção for alterada (passo 2) ou escolhida (passo 3);
 - [X] Acertar detalhes de design;
 - [X] Implementar responsividade;
-- [ ] Documentação do projeto (comentários);
-
 
 ### Screenshot
 
-<!--Abaixo estou deixando um screenshot do design final do projeto conforme desenvolvi:-->
+Abaixo estou deixando um screenshot do design final do projeto conforme desenvolvi:
 
-<!--![Imagem do meu resultado do projeto](./design/my-solution.jpg)-->
+![Imagem do meu resultado do projeto](./design/my-solution.jpg)
 
 ### Link
 
