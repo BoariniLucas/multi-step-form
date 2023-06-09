@@ -547,6 +547,7 @@ function totalPrice() {
     let addLarger = 0;
     let addCustom = 0;
     let total = 0;
+    let time = "";
 
     if(onlineService) {
         addOnline = onlinePrice;
@@ -562,7 +563,13 @@ function totalPrice() {
 
     total = chosenPlanPrice + addOnline + addLarger + addCustom
 
-    timeTotal.innerHTML = timeOption;
+    if(timeOption == "monthly") {
+        time = "month";
+    } else {
+        time = "year";
+    }
+
+    timeTotal.innerHTML = time;
     totalPrice.innerHTML = "+$" + total + "/" + timePrint();
 }
 
